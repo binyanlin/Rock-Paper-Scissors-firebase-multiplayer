@@ -1,0 +1,39 @@
+.mainRow1 {
+  min-height: 300px;
+}
+
+.mainRow2 {
+  min-height: 200px;
+}
+
+.imgRound {
+  border-radius: 50%;
+}
+
+.btnChoice {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+}
+
+.messageBox {
+  min-height: 150px;
+  max-height: 150px;
+  overflow-y: scroll;
+}
+
+.confirmButton {
+  height: 50px;
+}
+
+.instruct {
+  min-height: 80px;
+}
+
+.countdown {
+  min-height: 50px;
+}
+
+.bestOf {
+  text-decoration: underline;
+}

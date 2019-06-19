@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+  <!-- Start Page -->
+  <div class="row titleSpot my-3">
+    <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+    <h1 class="title col-sm text-center">Rock Paper Scissors</h1>
+    <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+  </div>
+  
+  <div class="submitUsername row text-center justify-content-center my-3">
+    <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+    <form class="usernameForm" action="" method="get">
+      <div class="username">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="name" required>
+      
+        <span class="startButton">
+          <input type="submit" value="Start!">
+        </span>
+      </div>
+      <div class="usernameSpot"></div> <!-- append username to this line after submit button -->
+    </form>
+    <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+  </div>
+
+  <div class="findOpponent mt-3">
+    <div class="row text-center justify-content-center">
+        <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+        <div class="col-sm">
+            <button id="playOpponent">Find Opponent</button>
+            <button id="playComputer">Play With Computer</button>
+        </div>
+        <div class="col-sm-2 col-xs-0 col-lg-3"></div>
+    </div>
+  </div>
+
+  <div class="main my-5">
+    <div class="row mainRow1">
+      <div class="col-sm-1 col-xs-0 col-lg-1"></div>
+      <div class="col-sm-7 col-xs-8 col-lg-7 gameBox border">
+        <h3 class="text-left gameInstruction my-4 ml-1">Select Rock, Paper, or Scissors</h3>
+        <div class="row RPSrow justify-content-center mt-4">
+          <div class="col-sm-3 mr-2">
+          </div>
+          <div class="col-sm-3 mx-2">
+            <button class="btn btn-success btnChoice" value="paper"><img class="paperPNG imgRound" src=""/>Paper</button>
+          </div>
+          <div class="col-sm-3 mx-2">
+          </div>
+        </div>
+        <div class="row RPSrow justify-content-center my-3">
+            <div class="col-sm-3 mr-2">
+              <button class="btn btn-primary btnChoice" value="rock"><img class="rockPNG imgRound" src=""/>Rock</button>
+            </div>
+            <div class="col-sm-0 mx-2">
+            </div>
+            <div class="col-sm-3 mx-2">
+              <button class="btn btn-danger btnChoice" value="scissors"><img class="scissorPNG imgRound" src=""/>Scissors</button>
+            </div>
+        </div>
+        <div class="text-center instruct">
+          <h3 class="instructions pt-3 mt-3">Instructions go here</h3>
+        </div>
+      </div>
+      <div class="col-sm-3 consoleBox border">
+        <h3 class="text-left gameInstruction my-4 ml-1">Console</h3>
+        <h4 class="text-center bestOf">Best of <span class="setToWin">5</span></h4>
+        <h5 class="mt-5">Round: <span class="roundCount"></span></h5>
+        <h5>Wins: <span class="winsCount"></span></h5>
+        <h5>Losses: <span class="lossesCount"></span></h5>
+        <div class="div mt-5">
+          <h5>Set Wins: <span class="setWinsCount"></span></h5>
+          <h5> SetLosses: <span class="setLossesCount"></span></h5>
+        </div>
+      </div>
+      <div class="col-sm-1 col-xs-0 col-lg-2"></div>
+    </div>
+
+    <div class="row mainRow2">
+      <div class="col-sm-1 col-xs-0 col-lg-1"></div>
+      <div class="col-sm-7 col-xs-8 col-lg-7 messageLog border">
+          <h3 class="text-left gameInstruction my-4 ml-1">Message Log:</h3>
+          <div class="messageBox jumbotron"></div>
+      </div>
+          
+      <div class="col-sm-3 optionsBox border">
+        <div class="countdown ml-3 my-5"></div>
+        <button class="btn btn-success confirmButton ml-5 mt-5">Confirm</button>
+      </div>
+      <div class="col-sm-1 col-xs-0 col-lg-2"></div>
+    </div>
+  </div>
+
+
+  
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-app.js"></script>
+  
+  <!-- TODO: Add SDKs for Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.0/firebase-database.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="./assets/javascript/app.js"></script>
+  
+</body>
+</html>
